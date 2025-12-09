@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quản lý phòng</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-title">Quản lý phòng</div>
+    <div class="header-menu" onclick="back()">Quay lại</div>
+</div>
+
+<div class="page">
+
+    <div class="section">
+        <label>Nhập tên phòng</label>
+        <input id="roomName" type="text" placeholder="VD: 101">
+        <button class="btn-primary" onclick="addRoom()">Thêm phòng</button>
+    </div>
+
+    <ul id="roomList" class="list"></ul>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/phong.js"></script>
+</body>
+</html>
