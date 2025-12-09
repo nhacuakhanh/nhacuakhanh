@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Sao lưu dữ liệu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-title">Sao lưu dữ liệu</div>
+    <div class="header-menu" onclick="back()">Quay lại</div>
+</div>
+
+<div class="page">
+
+    <button class="btn-primary" onclick="exportData()">Xuất dữ liệu JSON</button>
+
+    <textarea id="jsonBox" class="json-box" placeholder="Dán dữ liệu JSON để nhập..."></textarea>
+
+    <button class="btn-soft" onclick="importData()">Nhập dữ liệu</button>
+
+</div>
+
+<script src="js/storage.js"></script>
+
+<script>
+function exportData() {
+    jsonBox.value = StorageAPI.exportJSON();
+    alert("Đã xuất dữ liệu vào ô phía dưới!");
+}
+
+function importData() {
+    if (!confirm("Nhập dữ liệu sẽ ghi đè toàn bộ dữ liệu hiện tại. Tiếp tục?"))
+        return;
+
+    StorageAPI.importJSON(jsonBox.value);
+    alert("Đã nhập dữ liệu!");
+}
+
+function back() { window.location = 'admin.html'; }
+</script>
+
+</body>
+</html>
