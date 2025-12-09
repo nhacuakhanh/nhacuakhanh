@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quản lý cơ sở</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-title">Quản lý cơ sở</div>
+    <div class="header-menu" onclick="logout()">Đăng xuất</div>
+</div>
+
+<div class="page">
+
+    <div class="section">
+        <label>Nhập tên cơ sở</label>
+        <input type="text" id="baseName" placeholder="VD: Cơ sở 1 - Dương Quảng Hàm">
+    </div>
+
+    <ul id="baseList" class="list"></ul>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
